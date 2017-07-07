@@ -1,3 +1,15 @@
 while(slaying) {
-  slaying = false;
+      if (youHit) {
+        console.log("You hit!");
+        totalDamage += damageThisRound;
+        if (totalDamage >= 4) {
+            console.log("the dragon is slain!");
+            slaying = false;
+        } else {
+             youHit = Math.floor(Math.random() * 2);
+        }
+      } else {
+        console.log("You missed!");
+        slaying = false;
+      }
 }
